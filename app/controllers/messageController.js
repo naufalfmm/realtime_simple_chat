@@ -15,8 +15,8 @@ body: {
 }
 
 response:
-201 --> message is successfully saved and sent back
-400 --> sender or message is missing
+201 --> message was successfully saved and sent back
+400 --> sender or message data is missing
 403 --> validation error
 500 --> Internal Server Error
 */
@@ -28,7 +28,7 @@ messageController.addMessage = (io, req, res) => {
     //Save the data into the collection 'messages'
     message.save((err) => {
         if (err) { //If error
-            if (err.name === 'ValidationError') return res.status(403).json({ status: false, message: "Validation Error" })
+            if (err.name === 'ValidationError') return res.status(403).json({ status: false, message: "Something Wrong" })
             return res.status(500).json({ status: false, message: "Internal Server Error" })
         } else { //If success
             io.emit('sendMessage', req.body) // Send message sent by sender into sender and other client with event 'sendMessage
@@ -43,7 +43,7 @@ The function is for get all messages saved in database
 
 response:
 200
-404 --> no data is saved in database
+404 --> no message was saved in database
 500 --> Internal Server Error
 */
 messageController.getMessage = (req, res) => {
