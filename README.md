@@ -2,7 +2,7 @@ Simple Realtime Chat (API)
 ===========================
 **Caution** The project is just the API of the chat not include the frontend.
 
-This is the simple example of realtime chat. The project is created due to learning about Socket.IO in NodeJS (Express) and finishing the Backend Pre-test in [Warung Pintar][1]. The realtime chat app didn't support authentication, room chat, and private chat.
+This is the simple example of realtime chat. The realtime chat app didn't support authentication, room chat, and private chat.
 
 # Requirements
 The realtime chat requires
