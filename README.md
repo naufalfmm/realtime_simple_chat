@@ -1,10 +1,10 @@
-Realtime Simple Chat
+Simple Realtime Chat
 ===========================
 
 This is the simple example of realtime chat. The project is created due to learning about Socket.IO in NodeJS (Express) and finishing the Backend Pre-test in [Warung Pintar][1]. The realtime chat app didn't support authentication, room chat, and private chat.
 
 # Requirements
-The API Side of system requires
+The realtime chat requires
 - NodeJS >= 8.5.0
 - MongoDB >= 3.4.4
 
@@ -119,7 +119,7 @@ node app.js
     {
       "sender": "",
       "message": ""
-    },...
+    },
   ]}
   ```
 #### **Error Responses:**
