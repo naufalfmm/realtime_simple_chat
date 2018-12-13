@@ -1,5 +1,6 @@
-Simple Realtime Chat
+Simple Realtime Chat (API)
 ===========================
+**Caution** The project is just the API of the chat not include the frontend.
 
 This is the simple example of realtime chat. The project is created due to learning about Socket.IO in NodeJS (Express) and finishing the Backend Pre-test in [Warung Pintar][1]. The realtime chat app didn't support authentication, room chat, and private chat.
 
@@ -7,6 +8,15 @@ This is the simple example of realtime chat. The project is created due to learn
 The realtime chat requires
 - NodeJS >= 8.5.0
 - MongoDB >= 3.4.4
+
+# Usage
+If you want to use the API, you need to install **Socket.IO** on your project and add emit event 'sendMessage' into the project. Add the code below on your project (in NodeJS)
+> ```
+> const socket = io('the-url-of-the-api')
+> socket.emit('sendMessage', (message) => {
+    //
+> })
+> ```
 
 # Installation
 #### 1. Install NodeJS
