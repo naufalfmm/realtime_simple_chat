@@ -14,7 +14,7 @@ If you want to use the API, you need to install **Socket.IO** on your project an
 > ```
 > const socket = io('the-url-of-the-api')
 > socket.emit('sendMessage', (message) => {
-    //
+>    //
 > })
 > ```
 
